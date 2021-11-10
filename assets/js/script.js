@@ -4,7 +4,7 @@ const puppiesImage = document.querySelector('.puppies-image')
 const imageLink = document.querySelector('.image-link')
 
 modalImage.addEventListener('click', toggleShow)
-puppiesImage.addEventListener('click', onClickImage)
+// puppiesImage.addEventListener('click', onClickImage)
 imageLink.addEventListener('click', onClickLink)
 
 function toggleShow() {
@@ -21,8 +21,8 @@ function toggleShow() {
   }
 }
 
-function onClickImage() {
-  const src = puppiesImage.src
+function onClickImage(event) {
+  const src = event.target.src
   image.src = src
 
   toggleShow()
